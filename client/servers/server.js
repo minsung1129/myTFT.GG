@@ -9,12 +9,11 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const api_key = 'RGAPI-6a52f63d-492e-4306-b533-a23333a6159f'
+const api_key = 'RGAPI-8432be2f-88d6-4693-93d0-7eef2c210f03'
 const url = `https://kr.api.riotgames.com/tft/league/v1/challenger?api_key=${api_key}`
 
 app.use('/result', async (req, res) => {
-    const { data } = await axios.get(url)
-    console.log(data)
+    const { data } = await axios.get(url);
     res.json(data);
 })
 
