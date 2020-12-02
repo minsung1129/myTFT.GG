@@ -7,6 +7,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Route exact path="/" component={Main} />
         <Route path="/about" component={Search} />
       </div>
     );
